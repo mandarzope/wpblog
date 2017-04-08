@@ -37,7 +37,11 @@ class WPPostMetaTags
 			$tags =array();
 		}
 		
-		?><div class="form-field">
+		?>
+		<script>
+			var homePageUrl = "<?php echo get_home_url(); ?>";
+		</script>
+		<div class="form-field">
 			<label for="wp_post_meta_tags[seo_meta_tag_title]"><?php _e('SEO Meta tag title', 'meta-tags'); ?></label>
 			<input type="text" id="wp_post_meta_tags[seo_meta_tag_title]" name="wp_post_meta_tags[seo_meta_tag_title]" size="40" value="<?php echo esc_attr($tags['wp_post_meta_tag_title']==""||$tags['wp_post_meta_tag_title']==null?get_the_title($post):$tags['wp_post_meta_tag_title']);?>" />
 			<p class="description">Title meta of the post.</p>
