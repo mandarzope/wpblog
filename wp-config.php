@@ -19,17 +19,17 @@
  */
 
 // ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'arviwordpress');
+define('DB_NAME', isset($_SERVER['DB_NAME'])?$_SERVER['DB_NAME']:'arviwordpress');
 
 /** MySQL database username */
-define('DB_USER', 'mandar_zope');
+define('DB_USER', isset($_SERVER['DB_USER'])?$_SERVER['DB_USER']:'mandar_zope');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'shraddha');
+define('DB_PASSWORD', isset($_SERVER['DB_PASSWORD'])?$_SERVER['DB_PASSWORD']:'shraddha');
 
 /** MySQL hostname */
-define('DB_HOST', 'wordpress-arvi.cuamzal5upzt.ap-south-1.rds.amazonaws.com:3306');
+define('DB_HOST', isset($_SERVER['DB_HOST'])?$_SERVER['DB_HOST']:'wordpress-arvi.cuamzal5upzt.ap-south-1.rds.amazonaws.com:3306');
+
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
