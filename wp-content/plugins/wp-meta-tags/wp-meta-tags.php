@@ -108,6 +108,11 @@ class WPPostMetaTags
 	public static function wp_post_meta_tags_save()
 	{
 		global $post;
+
+		$post_title = get_the_title( $post->ID );
+		$_POST['wp_post_meta_tags']['seo_meta_tag_title'] = $_POST['wp_post_meta_tags']['seo_meta_tag_title'] ? $_POST['wp_post_meta_tags']['seo_meta_tag_title'] : $post_title;
+		$_POST['wp_post_meta_tags']['seo_meta_tag_description'] = $_POST['wp_post_meta_tags']['seo_meta_tag_description'] ? $_POST['wp_post_meta_tags']['seo_meta_tag_title'] : $post_title;
+		
 		update_post_meta($post->ID, 'wp_post_meta_tags', array(
 			'wp_post_meta_tag_title' => esc_attr( $_POST['wp_post_meta_tags']['seo_meta_tag_title']),
 			'wp_post_meta_tag_keywords' => esc_attr( $_POST['wp_post_meta_tags']['seo_meta_tag_keywords']),
