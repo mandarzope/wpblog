@@ -24,7 +24,7 @@ get_header(); ?>
 		</header>
 	<?php else : ?>
 	<header class="page-header">
-		<h2 class="page-title"><?php _e( 'Posts', 'twentyseventeen' ); ?></h2>
+		<h2 class="page-title"><?php //_e( 'Posts', 'twentyseventeen' ); ?></h2>
 	</header>
 	<?php endif; ?>
 
@@ -33,7 +33,7 @@ get_header(); ?>
 
 			<?php
 			if ( have_posts() ) :
-
+				$count = 2;
 				/* Start the Loop */
 				while ( have_posts() ) : the_post();
 
@@ -42,8 +42,15 @@ get_header(); ?>
 					 * If you want to override this in a child theme, then include a file
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					 */
-					get_template_part( 'template-parts/post/content', get_post_format() );
-
+					if ($count==2){
+						get_template_part( 'template-parts/post/content-first', get_post_format() );
+					} else {
+						get_template_part( 'template-parts/post/content', get_post_format() );
+					}
+					if ($count%3 == 0) {
+						echo "<div class=\"clear\"></div>";
+					}
+					$count++;
 				endwhile;
 
 				the_posts_pagination( array(

@@ -24,6 +24,7 @@ function twentyseventeen_posted_on() {
 
 	// Finally, let's write all of this to the page.
 	echo '<span class="posted-on">' . twentyseventeen_time_link() . '</span><span class="byline"> ' . $byline . '</span>';
+	//echo '<span class="byline"> ' . $byline . '</span>';
 }
 endif;
 
@@ -181,6 +182,15 @@ function twentyseventeen_categorized_blog() {
 	return $category_count > 1;
 }
 
+
+function twentyseventeen_custom_excerpt($text, $length){
+		$text = strip_shortcodes( $text );
+		$text = str_replace(']]>', ']]&gt;', $text);
+		$excerpt_length = apply_filters( 'excerpt_length', $length );
+		$excerpt_more = apply_filters( 'excerpt_more', ' ' . '[&hellip;]' );
+		$text = wp_trim_words( $text, $excerpt_length, $excerpt_more );
+		echo $text;
+	}
 
 /**
  * Flush out the transients used in twentyseventeen_categorized_blog.

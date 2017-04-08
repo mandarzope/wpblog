@@ -13,8 +13,10 @@
 		$sidebar = $body.find( '#secondary' ),
 		$entryContent = $body.find( '.entry-content' ),
 		$formatQuote = $body.find( '.format-quote blockquote' ),
+		$socialMedia = $body.find('.social-meta-tags-container'),
 		isFrontPage = $body.hasClass( 'twentyseventeen-front-page' ) || $body.hasClass( 'home blog' ),
 		navigationFixedClass = 'site-navigation-fixed',
+		fixedClass = 'fixed',
 		navigationHeight,
 		navigationOuterHeight,
 		navPadding,
@@ -52,6 +54,7 @@
 		navMenuItemHeight     = $navMenuItem.outerHeight() * 2;
 		idealNavHeight        = navPadding + navMenuItemHeight;
 		navIsNotTooTall       = navigationHeight <= idealNavHeight;
+		if ($socialMedia!=undefined) socialMediaLeft = $socialMedia.offset().left;
 	}
 
 	// Make navigation 'stick'.
@@ -69,12 +72,21 @@
 				} else {
 					headerOffset = $customHeader.innerHeight();
 				}
-
+				headerOffset = 200;
 				// If the scroll is more than the custom header, set the fixed class.
 				if ( $( window ).scrollTop() >= headerOffset ) {
 					$navigation.addClass( navigationFixedClass );
 				} else {
 					$navigation.removeClass( navigationFixedClass );
+				}
+				if (!!$socialMedia){
+					if ( $( window ).scrollTop() >= 400 ) {
+						$socialMedia.addClass( fixedClass );
+						$socialMedia.css("left",socialMediaLeft+"px");
+					} else {
+						$socialMedia.removeClass( fixedClass );
+						$socialMedia.css("left","auto");
+					}
 				}
 
 			} else {
@@ -93,7 +105,7 @@
 			if ( isFrontPage ) {
 				$branding.css( 'margin-bottom', navigationOuterHeight );
 			} else {
-				$customHeader.css( 'margin-bottom', navigationOuterHeight );
+				// $customHeader.css( 'margin-bottom', navigationOuterHeight );
 			}
 
 		} else {

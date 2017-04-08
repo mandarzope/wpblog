@@ -42,6 +42,43 @@
 	</div><!-- .site-content-contain -->
 </div><!-- #page -->
 <?php wp_footer(); ?>
-
+<script>
+	function validateSubscribe(form) {
+		var email = jQuery('#subcribe-email').val(); //document.getElementById("subcribe-email").value;
+		if (!validateEmail(email)){
+			jQuery('#subcribe-email').addClass("inValid");
+		} else {
+			var postData = {
+				"phone": "",
+				"name": "Blog Visitor",
+				"email": email,
+				"source": "blog"
+			}
+			var submitButton = document.getElementById("submit-email").setAttribute("disabled", true);
+			jQuery.ajax({
+				url: "https://api.askarvi.com/user/subscribe",
+				type: 'POST',
+				crossDomain: true,
+				dataType: 'json',
+				headers: {
+					Accept : "application/json; charset=utf-8"
+				},
+				data: postData,
+				success: function(result){
+					jQuery("#subcribe-email").prop('disabled', true);
+					jQuery('.subscriber-desc').html("You're In!");
+					jQuery('.subscribe-email-wrapper').addClass('done');
+					jQuery('.subscribe-button-wrapper').remove();
+				}
+			});
+		}
+		console.log("form submit called");
+		return false;
+	}
+	function validateEmail(email) {
+	  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	  return re.test(email);
+	}
+</script>
 </body>
 </html>

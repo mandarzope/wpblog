@@ -271,11 +271,10 @@ function twentyseventeen_fonts_url() {
 	if ( 'off' !== $libre_franklin ) {
 		$font_families = array();
 
-		$font_families[] = 'Libre Franklin:300,300i,400,400i,600,600i,800,800i';
+		$font_families[] = 'Merriweather:300,300i|Nunito:300,300i';
 
 		$query_args = array(
-			'family' => urlencode( implode( '|', $font_families ) ),
-			'subset' => urlencode( 'latin,latin-ext' ),
+			'family' => urlencode( implode( '|', $font_families ))
 		);
 
 		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
@@ -340,6 +339,16 @@ function twentyseventeen_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Header', 'twentyseventeen' ),
+		'id'            => 'sidebar-4',
+		'description'   => __( 'Add widgets here to appear in your header.', 'twentyseventeen' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );	
 }
 add_action( 'widgets_init', 'twentyseventeen_widgets_init' );
 
@@ -356,11 +365,12 @@ function twentyseventeen_excerpt_more( $link ) {
 		return $link;
 	}
 
-	$link = sprintf( '<p class="link-more"><a href="%1$s" class="more-link">%2$s</a></p>',
-		esc_url( get_permalink( get_the_ID() ) ),
-		/* translators: %s: Name of current post */
-		sprintf( __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ), get_the_title( get_the_ID() ) )
-	);
+	$link = "";
+	//~ sprintf( '<p class="link-more"><a href="%1$s" class="more-link">%2$s</a></p>',
+		//~ esc_url( get_permalink( get_the_ID() ) ),
+		//~ /* translators: %s: Name of current post */
+		//~ sprintf( __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ), get_the_title( get_the_ID() ) )
+	//~ );
 	return ' &hellip; ' . $link;
 }
 add_filter( 'excerpt_more', 'twentyseventeen_excerpt_more' );
@@ -386,7 +396,6 @@ function twentyseventeen_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'twentyseventeen_pingback_header' );
-
 /**
  * Display custom color CSS.
  */
@@ -525,6 +534,19 @@ function twentyseventeen_post_thumbnail_sizes_attr( $attr, $attachment, $size ) 
 	return $attr;
 }
 add_filter( 'wp_get_attachment_image_attributes', 'twentyseventeen_post_thumbnail_sizes_attr', 10, 3 );
+
+function getMyExcerpt($str, $startPos=0, $maxLength=100) {
+	if(strlen($str) > $maxLength) {
+		$excerpt   = substr($str, $startPos, $maxLength-3);
+		$lastSpace = strrpos($excerpt, ' ');
+		$excerpt   = substr($excerpt, 0, $lastSpace);
+		$excerpt  .= '...';
+	} else {
+		$excerpt = $str;
+	}
+	
+	return $excerpt;
+}
 
 /**
  * Use front-page.php when Front page displays is set to a static page.
