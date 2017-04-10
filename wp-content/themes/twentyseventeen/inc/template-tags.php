@@ -23,7 +23,7 @@ function twentyseventeen_posted_on() {
 	);
 
 	// Finally, let's write all of this to the page.
-	echo '<span class="posted-on">' . twentyseventeen_time_link() . '</span><span class="byline"> ' . $byline . '</span>';
+	echo '<span class="byline"> ' . $byline . '</span>';
 	//echo '<span class="byline"> ' . $byline . '</span>';
 }
 endif;

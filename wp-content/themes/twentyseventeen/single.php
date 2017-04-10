@@ -25,6 +25,7 @@ get_header(); ?>
 					
 					<div id="newsletter" class="subscribe-component subscribe-component-bottom">
 						<form id="subscribe" action="#" method="post" onsubmit="return validateSubscribe(this);" novalidate="">
+							<h2 class="subscriber-title">Be the first to know!</h2>
 							<div class="subscriber-desc hidden">Subscribe to our exclusive mailing list and get the freshest stories from the Lemonade team</div>
 							<div class="subscribe-input">
 								<div class="hidden" aria-hidden="true"><input type="text" class="hidden" name="honey" id="honey" aria-hidden="true"></div>
@@ -34,6 +35,7 @@ get_header(); ?>
 								</div>
 								<div class="subscribe-button-wrapper"><input type="submit" id="submit-email" value="SUBSCRIBE" data-track="blog_home.subscribe.clicked"></div>
 							</div>
+							<h6 class="subscriber-desc">Subscribe to our exclusive mailing list and get the freshest stories from the Teamarvi</h6>
 						</form>
 					</div>
 					

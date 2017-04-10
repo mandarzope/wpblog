@@ -4254,6 +4254,16 @@ float:left;
 #newsletter {
     position: relative;
     text-align: center;
+    /* margin: 20px auto; */
+    max-width: 100%;
+    align-self: center;
+    padding: 1rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+}
+#subscribe {
+	position: relative;
+    text-align: center;
     margin: 20px auto;
     max-width: 500px;
     align-self: center;
