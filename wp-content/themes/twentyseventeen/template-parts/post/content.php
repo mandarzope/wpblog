@@ -36,7 +36,7 @@
 					if ( is_single() ) :
 						twentyseventeen_posted_on();
 					else :
-						echo twentyseventeen_time_link();
+						// echo twentyseventeen_time_link();
 						twentyseventeen_edit_link();
 					endif;
 				echo '</div><!-- .entry-meta -->';
