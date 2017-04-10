@@ -4261,6 +4261,10 @@ float:left;
     border: 1px solid #ddd;
     border-radius: 1rem;
 }
+.site-branding #newsletter{
+	border: none;
+	padding-top: 0;
+}
 #subscribe {
 	position: relative;
     text-align: center;
