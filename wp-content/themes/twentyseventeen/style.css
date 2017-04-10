@@ -121,7 +121,7 @@ strong {
 
 b,
 strong {
-	font-weight: 700;
+	font-weight: 400;
 }
 
 code,
@@ -322,7 +322,7 @@ template {
 	display: block;
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-weight: 700;
+	font-weight: 400;
 	height: auto;
 	left: 5px;
 	line-height: normal;
@@ -449,35 +449,35 @@ h6:first-child {
 h1 {
 	font-size: 24px;
 	font-size: 1.5rem;
-	font-weight: 300;
+	font-weight: 400;
 }
 
 h2 {
 	color: #666;
 	font-size: 20px;
 	font-size: 1.25rem;
-	font-weight: 300;
+	font-weight: 400;
 }
 
 h3 {
 	color: #333;
 	font-size: 18px;
 	font-size: 1.125rem;
-	font-weight: 300;
+	font-weight: 400;
 }
 
 h4 {
 	color: #333;
 	font-size: 16px;
 	font-size: 1rem;
-	font-weight: 800;
+	font-weight: 400;
 }
 
 h5 {
 	color: #767676;
 	font-size: 13px;
 	font-size: 0.8125rem;
-	font-weight: 800;
+	font-weight: 400;
 	letter-spacing: 0.15em;
 	text-transform: uppercase;
 }
@@ -486,7 +486,7 @@ h6 {
 	color: #333;
 	font-size: 15px;
 	font-size: 0.9375rem;
-	font-weight: 800;
+	font-weight: 400;
 }
 
 p {
@@ -516,7 +516,7 @@ blockquote {
 blockquote cite {
 	display: block;
 	font-style: normal;
-	font-weight: 600;
+	font-weight: 400;
 	margin-top: 0.5em;
 }
 
@@ -666,7 +666,7 @@ html[lang="ur"] h3,
 html[lang="ur"] h4,
 html[lang="ur"] h5,
 html[lang="ur"] h6 {
-	font-weight: 700;
+	font-weight: 400;
 }
 
 /* Typography for Chinese Font */
@@ -685,7 +685,7 @@ html[lang^="zh-"] h3,
 html[lang^="zh-"] h4,
 html[lang^="zh-"] h5,
 html[lang^="zh-"] h6 {
-	font-weight: 700;
+	font-weight: 400;
 }
 
 /* Typography for Cyrillic Font */
@@ -726,7 +726,7 @@ html[lang="uk"] h3,
 html[lang="uk"] h4,
 html[lang="uk"] h5,
 html[lang="uk"] h6 {
-	font-weight: 700;
+	font-weight: 400;
 	line-height: 1.2;
 }
 
@@ -768,7 +768,7 @@ html[lang="mr-IN"] h3,
 html[lang="mr-IN"] h4,
 html[lang="mr-IN"] h5,
 html[lang="mr-IN"] h6 {
-	font-weight: 700;
+	font-weight: 400;
 }
 
 /* Typography for Greek Font */
@@ -787,7 +787,7 @@ html[lang="el"] h3,
 html[lang="el"] h4,
 html[lang="el"] h5,
 html[lang="el"] h6 {
-	font-weight: 700;
+	font-weight: 400;
 	line-height: 1.3;
 }
 
@@ -807,7 +807,7 @@ html[lang="gu-IN"] h3,
 html[lang="gu-IN"] h4,
 html[lang="gu-IN"] h5,
 html[lang="gu-IN"] h6 {
-	font-weight: 700;
+	font-weight: 400;
 }
 
 /* Typography for Hebrew Font */
@@ -826,7 +826,7 @@ html[lang="he-IL"] h3,
 html[lang="he-IL"] h4,
 html[lang="he-IL"] h5,
 html[lang="he-IL"] h6 {
-	font-weight: 700;
+	font-weight: 400;
 }
 
 /* Typography for Japanese Font */
@@ -845,7 +845,7 @@ html[lang="ja"] h3,
 html[lang="ja"] h4,
 html[lang="ja"] h5,
 html[lang="ja"] h6 {
-	font-weight: 700;
+	font-weight: 400;
 }
 
 /* Typography for Korean font */
@@ -864,7 +864,7 @@ html[lang="ko-KR"] h3,
 html[lang="ko-KR"] h4,
 html[lang="ko-KR"] h5,
 html[lang="ko-KR"] h6 {
-	font-weight: 600;
+	font-weight: 400;
 }
 
 /* Typography for Thai Font */
@@ -918,7 +918,7 @@ html[lang="th"] * {
 label {
 	color: #333;
 	display: block;
-	font-weight: 800;
+	font-weight: 400;
 	margin-bottom: 0.5em;
 }
 
@@ -1005,7 +1005,7 @@ input[type="submit"] {
 	display: inline-block;
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-weight: 800;
+	font-weight: 400;
 	line-height: 1;
 	padding: 1em 2em;
 	text-shadow: none;
@@ -1109,7 +1109,7 @@ li > ol {
 }
 
 dt {
-	font-weight: 700;
+	font-weight: 400;
 }
 
 dd {
@@ -1317,9 +1317,8 @@ color:#222;
 	display: none;
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-weight: 800;
+	font-weight: 400;
 	line-height: 1.5;
-	margin: 1px auto 2px;
 	padding: 1em;
 	text-shadow: none;
 }
@@ -1473,21 +1472,16 @@ body {
 	transition: opacity 0.2s;
 }
 
-.site-branding a:hover,
-.site-branding a:focus {
-	opacity: 0.7;
-}
-
 .site-title {
 	clear: none;
 	font-size: 24px;
 	font-size: 1.5rem;
-	font-weight: 800;
+	font-weight: 400;
 	line-height: 1.25;
 	letter-spacing: 0.08em;
 	margin: 0;
 	padding: 0;
-	text-transform: uppercase;
+	text-transform: capitalize;
 }
 
 .site-title,
@@ -1544,6 +1538,12 @@ body:not(.title-tagline-hidden) .site-branding-text {
 	display: inline-block;
 	vertical-align: middle;
 	max-width: 600px;
+}
+body.single-post .site-branding-text {
+	max-width: 1000px;
+}
+body.single-post .site-branding-text .site-title{
+	font-size: 3rem;
 }
 
 .custom-header {
@@ -1757,7 +1757,7 @@ background-color: #ececec;
 .page .panel-content .recent-posts .entry-title {
 	font-size: 20px;
 	font-size: 1.25rem;
-	font-weight: 300;
+	font-weight: 400;
 	letter-spacing: 0;
 	text-transform: none;
 }
@@ -1812,7 +1812,7 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 	color: #222;
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-weight: 800;
+	font-weight: 400;
 	letter-spacing: 0.14em;
 	text-transform: uppercase;
 }
@@ -1835,7 +1835,7 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 	color: #767676;
 	font-size: 11px;
 	font-size: 0.6875rem;
-	font-weight: 800;
+	font-weight: 400;
 	letter-spacing: 0.1818em;
 	padding-bottom: 0.25em;
 	text-transform: uppercase;
@@ -1860,7 +1860,7 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 	border-top: 1px solid #eee;
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-weight: 800;
+	font-weight: 400;
 	padding: 2em 0 3em;
 	text-align: center;
 }
@@ -2015,7 +2015,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 .page-links {
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-weight: 800;
+	font-weight: 400;
 	padding: 2em 0 3em;
 }
 
@@ -2047,7 +2047,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 	display: block;
 	font-size: 11px;
 	font-size: 0.6875rem;
-	font-weight: 800;
+	font-weight: 400;
 	letter-spacing: 0.1818em;
 	padding-left: 2.5em;
 	position: relative;
@@ -2086,7 +2086,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 	display: inline-block;
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-weight: 800;
+	font-weight: 400;
 	margin-top: 2em;
 	padding: 0.7em 2em;
 	-webkit-transition: background-color 0.2s ease-in-out;
@@ -2112,7 +2112,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 	color: #333;
 	font-size: 20px;
 	font-size: 1.25rem;
-	font-weight: 300;
+	font-weight: 400;
 	overflow: visible;
 	position: relative;
 }
@@ -2132,7 +2132,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 /* Post Navigation */
 
 .post-navigation {
-	font-weight: 800;
+	font-weight: 400;
 	margin: 3em 0;
 }
 
@@ -2346,7 +2346,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 	color: #767676;
 	font-size: 10px;
 	font-size: 0.625rem;
-	font-weight: 800;
+	font-weight: 400;
 	letter-spacing: 0.1818em;
 	text-transform: uppercase;
 }
@@ -2368,7 +2368,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 }
 
 .comment-reply-link {
-	font-weight: 800;
+	font-weight: 400;
 	position: relative;
 }
 
@@ -2424,7 +2424,7 @@ h2.widget-title {
 	color: #222;
 	font-size: 13px;
 	font-size: 0.8125rem;
-	font-weight: 800;
+	font-weight: 400;
 	letter-spacing: 0.1818em;
 	margin-bottom: 1.5em;
 	text-transform: uppercase;
@@ -2535,7 +2535,7 @@ h2.widget-title {
 .widget_rss li .rsswidget {
 	font-size: 22px;
 	font-size: 1.375rem;
-	font-weight: 300;
+	font-weight: 400;
 	line-height: 1.4;
 }
 
@@ -2546,7 +2546,7 @@ h2.widget-title {
 	font-size: 10px;
 	font-size: 0.625rem;
 	font-style: normal;
-	font-weight: 800;
+	font-weight: 400;
 	letter-spacing: 0.18em;
 	line-height: 1.5;
 	text-transform: uppercase;
@@ -2659,7 +2659,32 @@ h2.widget-title {
 .widget_calendar tfoot td {
 	border: 0;
 }
-
+.header-bottom {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 30px;
+}
+.post-author-details {
+    flex: 1;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+	margin: 1rem 0;
+}
+.entry-header .post-author-details {
+	justify-content: flex-start;
+}
+.post-author-details > *{
+	margin: 0 10px;
+	color:#fff;
+}
+.post-author-details img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;    
+}
 /*--------------------------------------------------------------
 16.0 Media
 --------------------------------------------------------------*/
@@ -2816,7 +2841,7 @@ object {
 }
 
 .site-content .wp-playlist-current-item .wp-playlist-item-title {
-	font-weight: 700;
+	font-weight: 400;
 }
 
 .site-content .wp-playlist-current-item .wp-playlist-item-album {
@@ -2826,7 +2851,7 @@ object {
 .site-content .wp-playlist-current-item .wp-playlist-item-artist {
 	font-size: 10px;
 	font-size: 0.625rem;
-	font-weight: 800;
+	font-weight: 400;
 	letter-spacing: 0.1818em;
 	text-transform: uppercase;
 }
@@ -2948,7 +2973,7 @@ object {
 	display: block;
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-weight: 700;
+	font-weight: 400;
 	letter-spacing: 1px;
 	padding: 3em;
 	text-transform: uppercase;
@@ -3053,6 +3078,15 @@ object {
 	font-size: 30px;
 }
 
+#site-logo {
+    fill: #f77287;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 50%;
+    transform: translateX(50%);
+}
+
 /*--------------------------------------------------------------
 19.0 Media Queries
 --------------------------------------------------------------*/
@@ -3129,7 +3163,7 @@ object {
 	/* Site Branding */
 
 	.site-branding {
-		padding: 3em 0;
+		padding: 0em 0;
 	}
 
 	/* Front Page */
@@ -3239,21 +3273,21 @@ object {
 	/* Site Branding */
 
 	.site-branding {
-		margin-bottom: 0;
-		position: absolute;
-		width: 100%;
-		top: 130px;
+    margin-bottom: 0;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
 	}
 
 	.has-header-image.twentyseventeen-front-page .site-branding,
 	.has-header-video.twentyseventeen-front-page .site-branding,
 	.has-header-image.home.blog .site-branding,
 	.has-header-video.home.blog .site-branding {
-		top: 200px;
 		display: block;
 		left: 0;
 		height: auto;
-		padding-top: 0;
+		padding-top: 30px;
 		position: absolute;
 		width: 100%;
 	}
@@ -3305,8 +3339,7 @@ object {
 	}
 
 	.site-title {
-		font-size: 36px;
-		font-size: 2.25rem;
+		font-size: 3.25rem;
 	}
 
 	.site-description {
@@ -3563,12 +3596,12 @@ object {
 
 	/* Front Page */
 
-	.twentyseventeen-front-page.has-header-image .site-branding,
+	/*.twentyseventeen-front-page.has-header-image .site-branding,
 	.twentyseventeen-front-page.has-header-video .site-branding,
 	.home.blog.has-header-image .site-branding,
 	.home.blog.has-header-video .site-branding {
 		margin-bottom: 70px;
-	}
+	}*/
 
 	.twentyseventeen-front-page.has-header-image .custom-header-media,
 	.twentyseventeen-front-page.has-header-video .custom-header-media,
@@ -3748,7 +3781,14 @@ object {
 		margin-top: 0;
 		margin-left: 1em;
 	}
-
+	#site-logo {
+		fill: #fff;	
+		top: 16px;
+		transition: fill .2s;
+	}
+	.site-navigation-fixed #site-logo {
+		fill: #f77287;
+	}
 	/* Entry content */
 
 	/* without sidebar */
@@ -4004,7 +4044,7 @@ object {
 	
 	/* mandar */
 	.has-header-image.home.blog .custom-header{
-		height:600px;
+		height:500px;
 	}
 	.site-content {
 		padding: 1em 0 0;

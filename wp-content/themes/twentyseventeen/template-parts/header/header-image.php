@@ -26,4 +26,13 @@
 	</div>
 
 	<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
+	<?php
+		if ( 'post' === get_post_type() ) :
+			echo '<div class="header-bottom">';
+			if ( is_single() ) :
+				echo get_author_tag($post->post_author);
+			endif;
+			echo '</div><!-- .entry-meta -->';
+		endif;
+	?>	
 </div><!-- .custom-header -->

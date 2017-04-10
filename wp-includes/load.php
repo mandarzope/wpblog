@@ -976,7 +976,7 @@ function is_ssl() {
 	} elseif ( isset($_SERVER['SERVER_PORT'] ) && ( '443' == $_SERVER['SERVER_PORT'] ) ) {
 		return true;
 	}
-	return true;
+	return false;
 }
 
 /**
