@@ -2680,6 +2680,9 @@ h2.widget-title {
 	margin: 0 10px;
 	color:#fff;
 }
+.entry-header .post-author-details > *{
+	color: #000;
+}
 .post-author-details img {
     height: 40px;
     width: 40px;

@@ -102,5 +102,5 @@ function twentyseventeen_is_frontpage() {
 }
 function get_author_tag($post_author) {
 	$avatar = get_the_author_meta('simple_local_avatar', $post_author);
-	return '<div class="post-author-details"><img width="150" height="150" src="' .$avatar["full"]. '"><span>'. get_the_author_meta('nicename', $post_author) .'</span></div>';
+	return '<div class="post-author-details"><img width="150" height="150" src="' .$avatar["full"]. '"><span>'. get_the_author_meta('display_name', $post_author) .'</span></div>';
 }
