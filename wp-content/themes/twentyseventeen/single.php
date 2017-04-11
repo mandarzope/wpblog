@@ -22,7 +22,19 @@ get_header(); ?>
 
 					get_template_part( 'template-parts/post/content-single', get_post_format() );
 					?>
-					
+					<?php echo '<div class="social-meta-tags-container">
+						<div class="social-meta-tags-social social-meta-tags-facebook">
+							<a target="_blank" href="https://www.facebook.com/sharer.php?u='.urlencode(post_permalink($post->ID)).'"></a>
+							<span></span></div>
+						<div class="social-meta-tags-social social-meta-tags-twitter">
+							<a target="_blank" href="https://twitter.com/intent/tweet?text='.urlencode($post->post_title).'&url='.urlencode(post_permalink($post->ID)).'"></a>
+							<span></span>
+						</div>
+						<div class="social-meta-tags-social social-meta-tags-linkedin">						
+							<a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&title='.urlencode($post->post_title).'&url='.urlencode(post_permalink($post->ID)).'&summary='.urlencode($post->post_excerpt).'"></a>	
+							<span></span></div>
+					</div>';
+					?>
 					<div id="newsletter" class="subscribe-component subscribe-component-bottom">
 						<form id="subscribe" action="#" method="post" onsubmit="return validateSubscribe(this);" novalidate="">
 							<h2 class="subscriber-title">Be the first to know!</h2>

@@ -7,7 +7,6 @@ class WPPostMetaTags
 		add_action( 'save_post', 'WPPostMetaTags::wp_post_meta_tags_save' );
 		add_action ('wp_head','WPPostMetaTags::wp_post_meta_tags_output');
 		add_filter( 'wp_title', 'WPPostMetaTags::do_wp_post_meta_tags_title', 10, 2);
-		add_action('the_content', 'WPPostMetaTags::my_metaTags');
 	}
 	
 	public static function post_add_custom_form_fields()
@@ -227,22 +226,5 @@ class WPPostMetaTags
 		return $title;
 	}
 	function my_metaTags($content){
-		
-		global $post;
-		// echo '<pre>';print_r($post);echo '</pre>';
-		if(is_single() AND get_post_type() == 'post') {
-			return $post->post_content.'<div class="social-meta-tags-container">
-				<div class="social-meta-tags-social social-meta-tags-facebook">
-					<a target="_blank" href="https://www.facebook.com/sharer.php?u='.urlencode(post_permalink($post->ID)).'"></a>
-					<span></span></div>
-				<div class="social-meta-tags-social social-meta-tags-twitter">
-					<a target="_blank" href="https://twitter.com/intent/tweet?text='.urlencode($post->post_title).'&url='.urlencode(post_permalink($post->ID)).'"></a>
-					<span></span>
-				</div>
-				<div class="social-meta-tags-social social-meta-tags-linkedin">						
-					<a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&title='.urlencode($post->post_title).'&url='.urlencode(post_permalink($post->ID)).'&summary='.urlencode($post->post_excerpt).'"></a>	
-					<span></span></div>
-			</div>';
-		}
 	}
 }
